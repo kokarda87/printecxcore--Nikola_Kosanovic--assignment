@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Uploader";
+}
+
+<h1>Uploader</h1>
+
+<form method="post" enctype="multipart/form-data" asp-controller="Upload" asp-action="FileUpload">
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Upload your file using this form:</p>
+            <input type="file" name="file" onchange="enableUploadButton()"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <input id="uploadBtn" type="submit" value="Upload"  disabled />
+        </div>
+    </div>
+</form>
+
+<script>
+    function enableUploadButton() {
+        document.getElementById("uploadBtn").disabled = false;
+    }
+</script>

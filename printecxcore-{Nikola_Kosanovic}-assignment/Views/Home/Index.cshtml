@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Utility template assignment for Printec made by Nikola Kosanovic</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <button class="tertiary large col-5" type="button" onclick="goToUtilityTemplate()">Pay with Utility Template</button>
+        <div class="col-1"></div>
+        <button class="tertiary large col-5" type="button" onclick="goToQrCodeUploader()">Pay with QR Code</button>
+    </div>
+</div>
+
+
+<script>
+  function goToUtilityTemplate() {
+    window.location.href = '/UtilityTemplate/Template';
+  }
+</script>
+
+<script>
+    function goToQrCodeUploader() {
+        window.location.href = '/Upload/Uploader';
+    }
+</script>

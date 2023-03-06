@@ -1,0 +1,85 @@
+﻿@model printecxcore__Nikola_Kosanovic__assignment.Models.UtilityTemplate
+
+@{
+    ViewData["Title"] = "Template";
+}
+
+<h1>Utility Template</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="JokeAPI" asp-action="JokeAPI" id="template">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DebtorName" class="control-label"></label>
+                <input asp-for="DebtorName" class="form-control" />
+                <span asp-validation-for="DebtorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DebtorAddressLine" class="control-label"></label>
+                <input asp-for="DebtorAddressLine" class="form-control" />
+                <span asp-validation-for="DebtorAddressLine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DebtorCity" class="control-label"></label>
+                <input asp-for="DebtorCity" class="form-control" />
+                <span asp-validation-for="DebtorCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreditorName" class="control-label"></label>
+                <input asp-for="CreditorName" class="form-control" />
+                <span asp-validation-for="CreditorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentDescription" class="control-label"></label>
+                <input asp-for="PaymentDescription" class="form-control" />
+                <span asp-validation-for="PaymentDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PurposeCode" class="control-label"></label>
+                <input asp-for="PurposeCode" class="form-control" />
+                <span asp-validation-for="PurposeCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrencyCode" class="control-label"></label>
+                <input asp-for="CurrencyCode" class="form-control" />
+                <span asp-validation-for="CurrencyCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DebtorAccount" class="control-label"></label>
+                @Html.DropDownListFor(m => m.DebtorAccount, Model.DebtorAccountList, new { @class="form-control" })
+                <span asp-validation-for="DebtorAccount" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="CreditorAccount" class="control-label"></label>
+                <input asp-for="CreditorAccount" class="form-control" />
+                <span asp-validation-for="CreditorAccount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreditorReference" class="control-label"></label>
+                <input asp-for="CreditorReference" class="form-control" />
+                <span asp-validation-for="CreditorReference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreditorReferenceModel" class="control-label"></label>
+                <input asp-for="CreditorReferenceModel" class="form-control" />
+                <span asp-validation-for="CreditorReferenceModel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" /> 
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+   

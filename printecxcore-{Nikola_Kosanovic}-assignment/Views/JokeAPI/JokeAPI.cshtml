@@ -1,0 +1,17 @@
+﻿@model printecxcore__Nikola_Kosanovic__assignment.Models.JokeAPI
+
+@{
+    ViewData["Title"] = "JokeAPI";
+}
+
+<h1>JokeAPI</h1>
+
+<h3>Setup: </h3>
+<h2>@Model.setup</h2>
+<h3>Delivery: </h3>
+<h2>@Model.delivery</h2>
+<br/>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-controller="UtilityTemplate" asp-action="Template">Back to Utility Template</a>
+</div>
